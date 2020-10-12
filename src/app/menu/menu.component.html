@@ -1,0 +1,9 @@
+
+<ul >
+    <li *ngFor="let m of menu">
+        {{m.name}}
+        <a *ngFor="let s of m.submenus">{{s.name}}
+        <app-menu [menu]="s.submenus" *ngIf="s.submenus"></app-menu>
+        </a>
+    </li>
+</ul>
